@@ -1,0 +1,65 @@
+{
+    "nav":{
+        "home":"Home",
+        "products":"Products",
+        "wish list":"Wish List",
+        "categories":"Categories",
+        "brands":"Brands",
+        "signout":"SignOut",
+        "long":"EN"
+    },
+    "home":{
+        "Shop Popular categories":"Shop Popular Categories",
+        "Add":"Add",
+        "EGP":"EGP",
+        "Searsh By Name...":"Searsh By Name...",
+        "All Brand":"All Brand"
+    },
+    "wish":{
+    "My Wish List":"My Wish List",
+    "Add TO Cart":"Add TO Cart",
+    "price":"Price",
+    "count":"count"
+    },
+    "cart":{
+        "Total Cart Price":"Total Cart Price",
+        "Shop Cart":"Shop Cart",
+        "Payment":"Payment",
+        "Clear Cart":"Clear Cart"
+    },
+    "footer":{
+        "Get The FreshCart App":"Get The FreshCart App",
+        "We Will Send You a Link, Open it on Your Phone to download the app":"We Will Send You a Link, Open it on Your Phone to download the app",
+        "Payment partners":"Payment partners",
+        "Get Deliveries with FreshCart":"Get Deliveries with FreshCart",
+        "Share App Link":"Share App Link"
+        
+    },
+    "login":{
+        "login naw":"Login Naw",
+        "email":"Email",
+        "password":"Password",
+        "login":"Login",
+        "Forget Password":"Forget Password",
+        "SignUp":"SignUp",
+        "register":"register",
+        "email is required":"email is required",
+        "enter valid email":"Enter Valid Email",
+        "password is required":"Password Is Required",
+        "enter valid password":"Enter Valid Password"
+    },
+    "Register":{
+        "Register":"Register",
+        "Register Naw":"Register Naw",
+        "name":"Name",
+        "name is required":"Name Is Required",
+        "phone is required":"phone is required",
+        "enter valid phone":"enter valid phone",
+        "name should be more than or equal 3 chars":"name should be more than or equal 3 chars",
+        "name should be less than or equal 20 chars":"name should be less than or equal 20 chars",
+        "phone":"phone",
+        "rePassword":"rePassword",
+        "password confirmation is incorrect":"password comfirmation is incorrect"
+    }
+    
+}

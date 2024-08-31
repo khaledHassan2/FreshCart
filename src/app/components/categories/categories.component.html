@@ -1,0 +1,16 @@
+<section class="container my-5">
+    <h1 class="text-main"> {{"nav.categories"|translate}} :</h1>
+    <div class="row">
+       @for (cat of categoriesList(); track $index) {
+        <div class="col-md-4 g-4">
+            <div class="inner product border rounded-3 h-100">
+                <img [src]="cat.image" [alt]="cat.name" height="400px" class="w-100 card-img-top">
+                <h2 class="h3 text-center text-main p-2">
+                    {{cat.name}}
+                </h2>
+            
+            </div>
+        </div>
+       }
+    </div>
+</section>

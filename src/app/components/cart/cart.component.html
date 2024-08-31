@@ -1,0 +1,40 @@
+<!-- <h1>Angular 17 Sweetalert 2 Examples - Tutsmake.com</h1>
+  
+<button (click)="simpleAlert()">Simple Alert</button>
+<button (click)="alertWithSuccess()">Alert with Success</button>
+<button (click)="confirmBox()">Confirm Box</button> -->
+<section class="bg-main-light container rounded-3 my-5">
+    <h1 class="text-center"> {{"cart.Shop Cart"|translate}} </h1>
+ <div class=" d-flex align-items-center justify-content-between">
+
+    <h2 class="h3 text-main"> {{"cart.Total Cart Price"|translate}} : {{UserCartList().totalCartPrice |currency:'GBP'}}</h2>
+    <button [routerLink]="['/order',UserCartList()._id]" class="btn-main"> {{"cart.Payment"|translate}} </button>
+
+ </div>
+   @for (item of UserCartList().products; track item.product.id) {
+
+
+    <div class="row mb-2 border-bottom">
+        <div class="col-md-2">
+            <div class="myImg">
+                <img [src]=" item.product.imageCover " class="w-100" [alt]=" item.product.title ">
+            </div>
+        </div>
+        <div class="col-md-10 d-flex align-items-center justify-content-between">
+            <div>
+                <h3 class="h5"> {{item.product.title}} </h3>
+                <p class="m-0 text-main"> {{"wish.price"|translate}} : {{item.price}} </p>
+                <span><i (click)="removeSpecificCart(item.product.id)" class="fa-regular fa-trash-can text-danger cr"></i></span>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+                <span><i (click)="updatecont(item.product.id,item.count + 1)" class="fa-regular fa-square-plus text-main cr fa-2x"></i></span>
+                <span> {{item.count}} </span>
+                <span><i (click)="updatecont(item.product.id,item.count - 1)" class="fa-regular fa-square-minus text-main cr fa-2x"></i></span>
+            </div>
+        </div>
+    </div>
+   }
+   @if( UserCartList().totalCartPrice !== 0){<button (click)="confirmBox()" class="btn btn-outline-danger m-3"> {{"cart.Clear Cart"|translate}} </button>}
+       
+
+</section>

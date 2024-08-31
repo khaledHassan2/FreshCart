@@ -1,0 +1,67 @@
+{
+    "nav": {
+        "home": "الرئيسية",
+        "products": "المنتجات",
+        "wish list": "قائمة الرغبات",
+        "categories": "الفئات",
+        "brands": "العلامات التجارية",
+        "signout": "تسجيل الخروج",
+        "long": " غ "
+    },
+    "home": {
+        "Shop Popular categories": "تسوق الفئات الشهيرة",
+        "Add": "إضافة",
+        "EGP": "جنيه",
+        "Searsh By Name...": "البحث بالاسم...",
+        "All Brand": "جميع العلامات التجارية"
+    },
+    "wish": {
+        "My Wish List": "قائمة الرغبات الخاصة بي",
+        "Add TO Cart": "أضف إلى السلة",
+        "price": "السعر",
+        "count":"العدد"
+    },
+    "cart": {
+        "Total Cart Price": "إجمالي سعر السلة",
+        "Shop Cart": "التسوق من السلة",
+        "Payment": "الدفع",
+        "Clear Cart": "إفراغ السلة"
+    },
+    "footer": {
+        "Get The FreshCart App": "احصل على تطبيق FreshCart",
+        "We Will Send You a Link, Open it on Your Phone to download the app": "سنرسل لك رابطًا، افتحه على هاتفك لتنزيل التطبيق",
+        "Payment partners": "شركاء الدفع",
+        "Get Deliveries with FreshCart": "احصل على التوصيلات مع FreshCart",
+        "Share App Link": "مشاركة رابط التطبيق"
+    },
+    "login": {
+            "login now": "تسجيل الدخول الآن",
+            "email": "البريد الإلكتروني",
+            "password": "كلمة المرور",
+            "login": "تسجيل الدخول",
+            "forget password": "نسيت كلمة المرور",
+            "signup": "اشتراك",
+            "register": "تسجيل",
+            "email is required": "البريد الإلكتروني مطلوب",
+            "enter valid email": "أدخل بريد إلكتروني صالح",
+            "password is required": "كلمة المرور مطلوبة",
+            "enter valid password": "أدخل كلمة مرور صالحة"
+        },
+      "Register": {
+                "Register": "تسجيل",
+                "Register Now": "سجل الآن",
+                "name": "الاسم",
+                "name is required": "الاسم مطلوب",
+                "phone is required": "رقم الهاتف مطلوب",
+                "enter valid phone": "أدخل رقم هاتف صالح",
+                "name should be more than or equal 3 chars": "يجب أن يكون الاسم أكثر من أو يساوي 3 أحرف",
+                "name should be less than or equal 20 chars": "يجب أن يكون الاسم أقل من أو يساوي 20 حرفًا",
+                "phone": "رقم الهاتف",
+                "rePassword": "تأكيد كلمة المرور",
+                "password confirmation is incorrect": "تأكيد كلمة المرور غير صحيح"
+        }
+        
+    
+    
+    
+}

@@ -1,0 +1,114 @@
+<section class="bg-main-light shadow p-2 my-5 rounded-4">
+
+       <h1 class="h2 text-main"> {{"Register.Register Now"|translate}} :</h1>
+
+    <form class="text-capitalize" [formGroup]="registerForm"(ngSubmit)="registerSubmit()">
+
+          <div class="form-floating mb-3">
+            <input 
+               [ngClass]="{
+                           'is-valid':!registerForm.get('name')?.errors && (registerForm.get('name')?.touched || registerForm.get('name')?.dirty),
+                           'is-invalid':registerForm.get('name')?.errors && (registerForm.get('name')?.touched || registerForm.get('name')?.dirty)
+                          }"   
+               formControlName="name" type="text" class="form-control shadow-none border-0" id="name" placeholder="name@example.com">
+            <label for="name"> {{"Register.name"|translate}} </label>
+            @if (registerForm.get('name')?.errors && (registerForm.get('name')?.touched || registerForm.get('name')?.dirty)) 
+            {
+              <div class="text-danger w-50 mt-1 p-1">
+
+                @if (registerForm.get('name')?.getError('required')) {<p class="m-0"> {{"Register.name is required"|translate}} </p>}
+
+                @else if (registerForm.get('name')?.getError('minlength')) {<p class="m-0"> {{"Register.name should be more than or equal 3 chars"|translate}} </p>}
+
+                @else if (registerForm.get('name')?.getError('maxlength')) {<p class="m-0"> {{"Register.name should be less than or equal 20 chars"|translate}} </p>}
+
+              </div>
+            }
+          </div>
+
+          <div class="form-floating mb-3">
+            <input
+            [ngClass]="{
+              'is-valid':!registerForm.get('email')?.errors && (registerForm.get('email')?.touched || registerForm.get('email')?.dirty),
+              'is-invalid':registerForm.get('email')?.errors && (registerForm.get('email')?.touched || registerForm.get('email')?.dirty)
+                       }"   
+            formControlName="email"  type="email" class="form-control shadow-none border-0 " id="email" placeholder="name@example.com">
+            <label for="email"> {{"login.email"|translate}} </label>
+
+            @if (registerForm.get('email')?.errors && (registerForm.get('email')?.touched || registerForm.get('email')?.dirty)) 
+            {
+              <div class="text-danger mt-1 w-50 p-0">
+
+                @if (registerForm.get('email')?.getError('required')) {<p class="m-0"> {{"login.email is required"|translate}} </p>}
+
+                @if (registerForm.get('email')?.getError('email')) {<p class="m-0"> {{"login.enter valid email"|translate}} </p>}
+                
+              </div>
+            }
+
+          </div>
+
+            <div class="form-floating mb-3">
+              <input
+              [ngClass]="{
+                'is-valid':!registerForm.get('phone')?.errors && (registerForm.get('phone')?.touched || registerForm.get('phone')?.dirty),
+                'is-invalid':registerForm.get('phone')?.errors && (registerForm.get('phone')?.touched || registerForm.get('phone')?.dirty)
+               }"   
+               formControlName="phone"  type="tel" class="form-control shadow-none border-0 " id="phone" placeholder="name@example.com">
+              <label for="phone"> {{"Register.phone"|translate}} </label>
+
+              @if (registerForm.get('phone')?.errors && (registerForm.get('phone')?.touched || registerForm.get('phone')?.dirty)) 
+              {
+                <div class="text-danger mt-1 w-50 p-0">
+
+                  @if (registerForm.get('phone')?.getError('required')) {<p class="m-0"> {{"Register.phone is required"|translate}} </p>}
+
+                  @if (registerForm.get('phone')?.getError('pattern')) {<p class="m-0"> {{"Register.enter valid phone"|translate}} </p>}
+                  
+                </div>
+              }
+              
+            </div>
+
+          <div class="form-floating mb-3">
+            <input
+            [ngClass]="{
+              'is-valid':!registerForm.get('password')?.errors && (registerForm.get('password')?.touched || registerForm.get('password')?.dirty),
+              'is-invalid':registerForm.get('password')?.errors && (registerForm.get('password')?.touched || registerForm.get('password')?.dirty)
+             }"   
+             formControlName="password"  type="password" class="form-control shadow-none border-0 " id="password" placeholder="name@example.com">
+            <label for="password"> {{"login.password"|translate}} </label>
+
+            @if (registerForm.get('password')?.errors && (registerForm.get('password')?.touched || registerForm.get('password')?.dirty)) 
+            {
+              <div class="text-danger mt-1 w-50 p-0">
+
+                @if (registerForm.get('password')?.getError('required')) {<p class="m-0"> {{"login.password is required"|translate}} </p>}
+
+                @if (registerForm.get('password')?.getError('pattern')) {<p class="m-0"> {{"login.enter valid password"|translate}} </p>}
+                
+              </div>
+            }
+
+          </div>
+
+          <div class="form-floating mb-3">
+            <input formControlName="rePassword"  type="password" class="form-control shadow-none border-0 " id="rePassword" placeholder="name@example.com">
+            <label for="rePassword"> {{"Register.rePassword"|translate}} </label>
+
+           @if(registerForm.getError('mismach')&& (registerForm.get('rePassword')?.touched || registerForm.get('rePassword')?.dirty))
+              {
+                  <p class="text-danger p-0 mt-1 w-50"> {{"Register.password confirmation is incorrect"|translate}} </p>
+              }
+
+          </div>
+
+        <button class="btn-main ms-auto d-block"> {{"Register.Register"|translate}} 
+             @if (isLoding()) {<span class="fas fa-spin fa-spinner"></span>}
+        </button>
+        @if (msgError()) {<p class="text-danger p-1 m-0"> {{msgError()}} </p>}
+        @if (msgSucsses()){<p class="text-success p-1 m-0"> {{msgSucsses()}} </p>}
+       
+    </form>
+
+</section>

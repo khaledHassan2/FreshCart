@@ -1,0 +1,32 @@
+
+<h1 class="h2 text-main text-center my-3">all orders</h1>
+
+
+@for (order of ordersList(); track $index) {
+        <section class="border-bottom border-top my-4 bg-main-light container">
+           <div class="d-flex justify-content-between align-items-center m-2">
+            <h2 class="h5 ">totalOrderPrice {{order.totalOrderPrice}} EGP</h2>
+            <h2 class="h5 ">Date {{order.updatedAt}} </h2>
+           </div>
+        @for (wish of order.cartItems; track $index) {
+    
+    
+            <div class="row mb-2">
+                <div class="col-md-1">
+                    <div class="myImg">
+                        <img [src]=" wish.product.imageCover " class="w-100" [alt]=" wish.product.title ">
+                    </div>
+                </div>
+                <div class="col-md-10 d-flex align-items-center justify-content-between">
+                    <div>
+                        <h3 class="h5"> {{wish.product.title}} </h3>
+                        <p class="m-0 text-main"> {{"wish.price"|translate}} : {{wish.price}} </p>
+                        <p class="m-0 text-main"> {{"wish.count"|translate}} : {{wish.count}} </p>
+                    </div>
+                </div>
+            </div>
+           }
+        
+        </section>
+    }
+

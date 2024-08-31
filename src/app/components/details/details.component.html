@@ -1,0 +1,42 @@
+<section class="container py-5">
+
+    <div class="row align-items-center">
+        <div class="col-md-4">
+                <owl-carousel-o [options]="customOptions">
+
+                        @for (item of detailsProduct().images; track $index) {
+
+                            <ng-template carouselSlide >
+                              <img [src]="item" class="w-100" [alt]="detailsProduct().title">
+                            </ng-template>
+                        }
+                
+                  </owl-carousel-o>
+        </div>
+        <div class="col-md-8">
+            <h3> {{detailsProduct().title}} </h3>
+            <p> {{detailsProduct().description}} </p>
+            <h6 class="text-main"> {{ detailsProduct().category.name }} </h6>
+            <div class="d-flex justify-content-between align-items-center">
+                <span> {{detailsProduct().price}}  {{"home.EGP"|translate}} </span>
+
+                <div>
+                    @for (item of [1,2,3,4,5].slice(0,detailsProduct().ratingsAverage); track detailsProduct().id) {
+                        <span><i class="fas fa-star rating-color"></i></span>
+
+                    }
+                    @if (detailsProduct().ratingsAverage%1 !==0) {
+                        <span><i class="fas fa-star-half-stroke rating-color"></i></span>
+                    }
+                    <span> {{detailsProduct().ratingsAverage}} </span>
+                </div>
+
+            </div>
+
+            
+            <button (click)="addToCart(detailsProduct().id)" class="btn-main w-100 my-2"> {{"wish.Add TO Cart"|translate}} @if (isLoding()) { <i class="fas fa-spin fa-circle-notch"></i> }</button>
+
+        </div>
+    </div>
+
+</section>

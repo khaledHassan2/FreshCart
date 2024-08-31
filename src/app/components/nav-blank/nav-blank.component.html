@@ -1,0 +1,61 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top z-3 ">
+    <div class="container-fluid mx-3 d-flex justify-content-between">
+      <div class="">
+        <a class="navbar-brand" routerLink="home"><img class="w-100" src="./assets/images/freshcart-logo.svg" alt="logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      </div>
+      <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link"routerLinkActive="active-link" routerLink="home"> {{ "nav.home"|translate }} </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"routerLinkActive="active-link" routerLink="product"> {{ "nav.products"|translate }} </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"routerLinkActive="active-link" routerLink="wish"> {{ "nav.wish list"|translate }} <i class="fas fa-heart fa-beat cr"></i> </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"routerLinkActive="active-link" routerLink="categories"> {{ "nav.categories"|translate }} </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"routerLinkActive="active-link" routerLink="brand"> {{ "nav.brands"|translate }} </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link position-relative"routerLinkActive="active-link" routerLink="cart"><i class="fa-solid fa-cart-shopping pt-2 ps-2"></i><span class="bg-info badge position-absolute top-0 start-0"> {{navCountProduct()}} </span></a>
+          </li>
+         
+          
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a (click)="change()" class="nav-link cr p-2 bg-info text-white rounded mx-2">  {{ "nav.long"|translate }} </a>
+          </li>
+            <li class="nav-item">
+              <a class="nav-link"><i class="fab fa-instagram"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"><i class="fab fa-facebook"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"><i class="fab fa-tiktok"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" target="_blank"  href="https://www.linkedin.com/in/khaled-mahmoud-hassan-ahmed/"><i class="fab fa-linkedin"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"><i class="fab fa-youtube"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link cr" (click)="_AuthService.logOut()"> <i class="fa-solid fa-right-from-bracket ms-3" style="color: #1ed233;"></i> </a>
+              </li>
+            
+          </ul>
+      </div>
+    </div>
+  </nav>

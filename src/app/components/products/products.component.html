@@ -1,0 +1,46 @@
+<section class="products">
+    <div class="container-fluid py-5">
+
+        <div class="input-group flex-nowrap w-50 mx-auto shadow m-3">
+            <input [(ngModel)]="textSearsh" type="text" class="form-control shadow-none" placeholder=' {{"home.Searsh By Name..."|translate}} ' aria-label="Username" aria-describedby="addon-wrapping">
+            <span class="input-group-text bg-main-light " id="addon-wrapping"><i class="fa-solid fa-magnifying-glass text-main fa-2"></i></span>
+          </div>
+
+          <div class="row">
+            @for (product of productList() |searshPipe:textSearsh(); track product.id) {
+             <div class="col-md-2 g-3">
+                 <div class="inner product border-0 p-2">
+                     <div [routerLink]="['/details',product.id]">
+                         <img [src]="product.imageCover" class="w-100" [alt]="product.title">
+                     <h2 class=" text-main small"> {{product.category.name}} </h2>
+                     <h3 class=" h6"> {{product.title.split(' ',2).join(' ')}} </h3>
+                     <div class="d-flex justify-content-between align-items-center">
+                         <span> {{product.price}} {{"home.EGP"|translate}} </span>
+                     
+                         <div>
+                             @for (item of [1,2,3,4,5].slice(0,product.ratingsAverage); track $index) {
+                                 <span><i class="fas fa-star rating-color"></i></span>
+         
+                             }
+                             @if (product.ratingsAverage%1 !==0) {
+                                 <span><i class="fas fa-star-half-stroke rating-color"></i></span>
+                             }
+                         </div>
+     
+                     </div>
+     
+                     </div>
+                     <div class="d-flex justify-content-between align-items-center container">
+                         <button (click)="addToCart(product.id)" class="btn-main"> {{"home.Add"|translate}} <i class="fa-solid fa-cart-shopping fa-flip"></i></button>
+                         <div [ngClass]="{
+                            'text-danger': isProductInWishlist(product.id),
+                            'text-black': !isProductInWishlist(product.id)
+                          }" class="myHart"><i (click)="addWishList(product.id)" class="fas fa-heart fa-2x"></i></div>
+                     </div>
+     
+                 </div>
+             </div>
+            }
+         </div>
+    </div>
+</section>

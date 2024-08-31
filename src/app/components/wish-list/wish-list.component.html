@@ -1,0 +1,26 @@
+<section class="container bg-main-light rounded-3 mt-5">
+    <h1 class="h2 text-main"> {{"wish.My Wish List"|translate}} </h1>
+
+    @for (wish of wishList(); track wish.id) {
+
+
+        <div class="row mb-2 border-bottom container">
+            <div class="col-md-2">
+                <div class="myImg">
+                    <img [src]=" wish.imageCover " class="w-100" [alt]=" wish.title ">
+                </div>
+            </div>
+            <div class="col-md-10 d-flex align-items-center justify-content-between">
+                <div>
+                    <h3 class="h5"> {{wish.title}} </h3>
+                    <p class="m-0 text-main"> {{"wish.price"|translate}} : {{wish.price}} </p>
+                    <span><i (click)="removeSpecificCart(wish.id)" class="fa-regular fa-trash-can text-danger cr"></i></span>
+                </div>
+                <div>
+                    <button (click)="addToCart(wish.id)" class="btn-main"> {{"wish.Add TO Cart"|translate}} </button>
+                </div>
+            </div>
+        </div>
+       }
+
+</section>

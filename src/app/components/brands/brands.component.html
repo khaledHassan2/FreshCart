@@ -1,0 +1,16 @@
+<section class="container my-5">
+    <h1 class="text-main text-center"> {{"home.All Brand"|translate}} </h1>
+    <div class="row">
+       @for (brand of brandsList(); track $index) {
+        <div (click)="getBrand(brand._id)" class="col-md-3 g-4">
+            <div class="inner product border rounded-3 h-100">
+                <img [src]="brand.image" [alt]="brand.name" class="w-100 card-img-top">
+                <h2 class="h3 text-center text-main p-2">
+                    {{brand.name}}
+                </h2>
+            
+            </div>
+        </div>
+       }
+    </div>
+</section>
