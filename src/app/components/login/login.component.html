@@ -1,5 +1,5 @@
 <section class="bg-main-light shadow p-2 my-5 rounded-4 text-capitalize">
-    <h1 class="h2 text-main"> {{"login.login now"|translate}} :</h1>
+    <h1 class="h2 text-main"> {{"login.login naw"|translate}} :</h1>
     <form [formGroup]="loginForm" (ngSubmit)="loginSubmit()">
         <div class="form-floating mb-3">
             <input
@@ -14,7 +14,7 @@
             {
               <div class="text-danger mt-1 w-50 p-0">
 
-                @if (loginForm.get('email')?.getError('required')) {<p class="m-0"> {{"login.email is_required"|translate}} </p>}
+                @if (loginForm.get('email')?.getError('required')) {<p class="m-0"> {{"login.email is required"|translate}} </p>}
 
                 @if (loginForm.get('email')?.getError('email')) {<p class="m-0"> {{"login.enter valid email"|translate}} </p>}
                 
@@ -43,14 +43,14 @@
             }
 
           </div>
-          <div class="d-flex align-items-center justify-content-between container">
+          <div class="d-md-flex align-items-center justify-content-between container">
 
             <div class="">
-              <a routerLink="/register" class="link-info"> {{"login.signup"|translate}} </a>
+              <a routerLink="/register" class="link-info"> {{"login.SignUp"|translate}} </a>
             </div>
 
-            <div class="d-flex align-items-center justify-content-end gap-4">
-              <a routerLink="/forgot" class="link-primary"> {{"login.forget password"|translate}} ?</a>
+            <div class="d-flex align-items-center justify-content-md-end justify-content-between gap-4">
+              <a routerLink="/forgot" class="link-primary"> {{"login.Forget Password"|translate}} ?</a>
               <button class="btn-main"> {{"login.login"|translate}} 
               @if (isLoding()) {<span class="fas fa-spin fa-spinner"></span>}
               </button>

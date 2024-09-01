@@ -35,12 +35,12 @@
         "Share App Link": "مشاركة رابط التطبيق"
     },
     "login": {
-            "login now": "تسجيل الدخول الآن",
+            "login naw": "تسجيل الدخول الآن",
             "email": "البريد الإلكتروني",
             "password": "كلمة المرور",
             "login": "تسجيل الدخول",
-            "forget password": "نسيت كلمة المرور",
-            "signup": "اشتراك",
+            "Forget Password": "نسيت كلمة المرور",
+            "SignUp": "اشتراك",
             "register": "تسجيل",
             "email is required": "البريد الإلكتروني مطلوب",
             "enter valid email": "أدخل بريد إلكتروني صالح",
