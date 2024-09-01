@@ -12,12 +12,18 @@ export class OrderService {
   
 
   Checkout(idCart:string|null,data:object):Observable<any>{
-    return this._HttpClient.post(`${environment.baseUrl}/api/v1/orders/checkout-session/${idCart}?url=${environment.localServer}`,
-      {
-        "shippingAddress":data
-      },
+    if (typeof window!='undefined') {
       
-    )
+      return this._HttpClient.post(`${environment.baseUrl}/api/v1/orders/checkout-session/${idCart}?url=${window.location.origin}`,
+        {
+          "shippingAddress":data
+        },
+        
+      )
+    }else{
+
+      return this._HttpClient.get('');
+    }
   }
  CashOrder(idCart:string|null,data:object):Observable<any>{
     return this._HttpClient.post(`${environment.baseUrl}/api/v1/orders/${idCart}`,

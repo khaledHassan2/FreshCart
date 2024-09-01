@@ -60,6 +60,14 @@
         "phone":"phone",
         "rePassword":"rePassword",
         "password confirmation is incorrect":"password comfirmation is incorrect"
+    },
+    "order":{
+        "shipping":"Shipping",
+        "details":"Details",
+        "city":"City",
+        "phone":"Phone",
+        "Cash Order":"Cash Order",
+        "Check Out visa":"Check Out"
     }
     
 }

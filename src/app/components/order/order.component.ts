@@ -5,11 +5,12 @@ import { OrderService } from '../../core/services/order.service';
 import { ToastrModule, ToastrService } from 'ngx-toastr';
 import { CartService } from '../../core/services/cart.service';
 import { Subscription } from 'rxjs';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-order',
   standalone: true,
-  imports: [ReactiveFormsModule,],
+  imports: [ReactiveFormsModule,TranslateModule],
   templateUrl: './order.component.html',
   styleUrl: './order.component.css'
 })

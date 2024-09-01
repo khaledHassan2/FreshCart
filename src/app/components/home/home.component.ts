@@ -98,6 +98,9 @@ export class HomeComponent implements OnInit ,OnDestroy{
  
  
   ngOnInit(): void {
+   console.log(window.location);
+   
+    
     this._NgxSpinnerService.show();
     this.productSupscrip = this._ProductsService.getAllProduct().subscribe({
 

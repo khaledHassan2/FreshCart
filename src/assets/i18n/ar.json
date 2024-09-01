@@ -59,7 +59,15 @@
                 "phone": "رقم الهاتف",
                 "rePassword": "تأكيد كلمة المرور",
                 "password confirmation is incorrect": "تأكيد كلمة المرور غير صحيح"
-        }
+        },
+            "order": {
+                "shipping": "الشحن",
+                "details": "التفاصيل",
+                "city": "المدينة",
+                "phone": "الهاتف",
+                "Cash Order": "طلب نقدي",
+                "Check Out visa": "الدفع ببطاقة فيزا"
+            }
         
     
     
